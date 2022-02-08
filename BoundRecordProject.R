@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 
 #Load in text
-text <- readChar("Index-6pgs.txt", file.info("Index-6pgs.txt")$size)
+text <- readChar("Index_HALF.txt", file.info("Index_HALF.txt")$size)
 
 
 # Breaks the text at each congress person's name format LAST, I. FIRST
