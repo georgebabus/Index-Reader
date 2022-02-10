@@ -19,6 +19,7 @@ regex <- '(?<=[A-Z]{3,25},\\s(([A-Z]\\. )?)[A-Z]{3,25})( |,|-|-)|(?<=\\d{3,4}\\.
 members <- lapply(clean, str_split, regex)
 
 #selects only the members listed with remarks by, on
+#i.e. only those who spoke
 Speaking = members[grep("Remarks by, on",members)]
 
 # Instantiates a data frame   
@@ -54,7 +55,7 @@ for (i in 1:length(Topicslist)) {
 }
 
 
-
+# Label columns 
 Table$Topics <- Topics[-1]
 Table$Page <- Pages[-1]
 
@@ -80,6 +81,7 @@ for (i in 1:length(a)) {
 }
 
 
+# Label colmn 
 Table$Name <- listOfNames[-1]
 
 
